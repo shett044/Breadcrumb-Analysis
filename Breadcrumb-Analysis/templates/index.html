@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./static/lib/css/dc.css">
+    <link rel="stylesheet" href="./static/css/custom.css">
+    <link rel="stylesheet" href="./static/lib/css/dropdown.min.css">
+    <link rel="stylesheet" href="./static/lib/css/transition.min.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/sequences.css"/>
+</head>
+<body class="application">
+<!-- This is for the header application-->
+<!--<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
+<!--<div class="navbar-header">-->
+<!--<a class="brand" href="./">Donorschoose Dashboard</a>-->
+<!--</div>-->
+<!--</div>-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                Breadcrumb Dashboard
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Main content is here-->
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-3 sidebar">
+            <!--<span class="nav nav-sidebar">-->
+                <!--<h5 class="list-group-item active">Comop</h5>-->
+                <!--<select class="ui search selection dropdown" id="level2-select"> </select>-->
+            <!--</span>-->
+            <span class="nav nav-sidebar">
+                <h5 class="list-group-item active">Title</h5>
+                <select class="ui search selection dropdown" id="title-select"> </select>
+            </span>
+            <!--<span class="nav nav-sidebar">-->
+                <!--<h5 class="list-group-item active">Reporting Date</h5>-->
+                <!--<select class="ui search selection dropdown" id="reporting-select"></select>-->
+            <!--</span>-->
+            <!--<span class="nav nav-sidebar list-group scrollable-menu" id="model-select">-->
+                <!--<a href="#" class="list-group-item active">-->
+                    <!--<h5 class="list-group-item-heading">Forecasting Type <span class="badge" style="float:right">MAPE</span></h5>-->
+                <!--</a>-->
+
+            <!--</span>-->
+        </div>
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="col-sm-10">
+            <div id="main">
+              <div id="sequence"></div>
+              <div id="chart">
+                <div id="explanation" style="visibility: hidden;">
+                  <span id="percentage"></span><br/>
+                  of visits begin with this sequence of pages
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="col-md-2" >
+            <div id="sidebar">
+                  <input type="checkbox" id="togglelegend"> Legend<br/>
+                  <div id="legend" style="visibility: hidden;"></div>
+            </div>
+    </div>
+
+</div>
+
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--<script src="./static/lib/js/d3.js"></script>-->
+<script src="./static/lib/js/crossfilter.js"></script>
+<script src="./static/lib/js/dc.js"></script>
+<script src="./static/lib/js/transition.min.js" type='text/javascript'></script>
+<script src="./static/lib/js/dropdown.js" type='text/javascript'></script>
+
+<script type="text/javascript" src="./static/js/sequences.js"></script>
+    <script type="text/javascript">
+      // Hack to make this example display correctly in an iframe on bl.ocks.org
+      d3.select(self.frameElement).style("height", "700px");
+  </script>
+
+
+</body>
+</html>
